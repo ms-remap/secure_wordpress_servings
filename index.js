@@ -13,10 +13,8 @@ app.use(express.json());
 
 // List of allowed frontend domains
 const allowedOrigins = [
-    "https://yourwordpresssite.com",
-    "https://www.yourwordpresssite.com",
-    "http://localhost:3000",
-    "http://localhost:8080"
+    "https://remap.ai",
+    "https://busi.chat",
 ];
 
 // API Key from env
