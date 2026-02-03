@@ -126,8 +126,12 @@ app.post('/api/generate', async (req, res) => {
     }
 });
 
-// ===== HEALTH CHECK =====
+// ===== SIMPLE ROOT ROUTE =====
+app.get('/', (req, res) => {
+    res.send("✅ AI Middleware Server Started!");
+});
 
+// ===== HEALTH CHECK =====
 app.get('/api/health', (req, res) => {
     res.json({
         status: "ok",
