@@ -15,6 +15,7 @@ app.use(express.json());
 const allowedOrigins = [
     "https://remap.ai",
     "https://busi.chat",
+    "https://useprivate.ai",
 ];
 
 // API Key from env
