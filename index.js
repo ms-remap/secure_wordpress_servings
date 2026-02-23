@@ -84,7 +84,7 @@ app.post('/api/generate', async (req, res) => {
 
         // Forward request to Gemini API
         const geminiResponse = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`,
+            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
             {
                 method: 'POST',
                 headers: {
