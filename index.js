@@ -20,6 +20,7 @@ const allowedOrigins = [
 
 // API Key from env
 const API_KEY = process.env.GEMINI_API_KEY;
+const GEMINI_MODEL =  process.env.GEMINI_MODEL;
 
 if (!API_KEY) {
     console.error("❌ ERROR: GEMINI_API_KEY missing from .env file");
@@ -84,7 +85,7 @@ app.post('/api/generate', async (req, res) => {
 
         // Forward request to Gemini API
         const geminiResponse = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
+            `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${API_KEY}`,
             {
                 method: 'POST',
                 headers: {
